@@ -8,7 +8,7 @@
 
 #import "LELoginController.h"
 #import "MBProgressHUD+MJ.h"
-
+#import "homeViewController.h"
 @interface LELoginController ()
 @property (weak, nonatomic) IBOutlet UITextField *userTelTextField;
 @property (weak, nonatomic) IBOutlet UITextField *userPwdTextField;
@@ -91,6 +91,11 @@
         }
         else if ([status isEqual:@0]){
             [MBProgressHUD showSuccess:@"登录成功！"];
+            sleep(1);
+            
+            UIStoryboard *story=[UIStoryboard  storyboardWithName:@"Main" bundle:nil];
+            UIViewController *dtView=[story  instantiateViewControllerWithIdentifier:@"tabbar"];
+            [self presentViewController:dtView animated:NO completion:nil];
         }
         
     }];

@@ -20,6 +20,8 @@
 		64B238131C2D4FB500CA6980 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B2380F1C2D4FB500CA6980 /* MBProgressHUD+MJ.m */; };
 		64B238141C2D4FB500CA6980 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 64B238101C2D4FB500CA6980 /* MBProgressHUD.bundle */; };
 		64B238151C2D4FB500CA6980 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B238121C2D4FB500CA6980 /* MBProgressHUD.m */; };
+		64B238181C2D722200CA6980 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B238171C2D722200CA6980 /* NSArray+Log.m */; };
+		64B2381B1C2D768400CA6980 /* LEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B2381A1C2D768400CA6980 /* LEUser.m */; };
 		64E7CE441C0D6D4100E8FFBD /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E7CE431C0D6D4100E8FFBD /* homeViewController.m */; };
 		64E7CE4C1C0D6EF000E8FFBD /* LEHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E7CE4A1C0D6EF000E8FFBD /* LEHeaderView.m */; };
 		64E7CE4D1C0D6EF000E8FFBD /* LEHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64E7CE4B1C0D6EF000E8FFBD /* LEHeaderView.xib */; };
@@ -73,6 +75,10 @@
 		64B238101C2D4FB500CA6980 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		64B238111C2D4FB500CA6980 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		64B238121C2D4FB500CA6980 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		64B238161C2D722200CA6980 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		64B238171C2D722200CA6980 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		64B238191C2D768400CA6980 /* LEUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEUser.h; sourceTree = "<group>"; };
+		64B2381A1C2D768400CA6980 /* LEUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEUser.m; sourceTree = "<group>"; };
 		64E7CE421C0D6D4100E8FFBD /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
 		64E7CE431C0D6D4100E8FFBD /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		64E7CE491C0D6EF000E8FFBD /* LEHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEHeaderView.h; sourceTree = "<group>"; };
@@ -149,7 +155,6 @@
 		6462569E1C0C87E20028CF5F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				64B2380D1C2D4FB500CA6980 /* MBProgressHUD */,
 				64E7CE4E1C0D76C400E8FFBD /* fruit.plist */,
 				646256AD1C0C87E20028CF5F /* Assets.xcassets */,
 				646256B21C0C87E20028CF5F /* Info.plist */,
@@ -192,6 +197,9 @@
 		64E7CE451C0D6D5800E8FFBD /* others */ = {
 			isa = PBXGroup;
 			children = (
+				64B238161C2D722200CA6980 /* NSArray+Log.h */,
+				64B238171C2D722200CA6980 /* NSArray+Log.m */,
+				64B2380D1C2D4FB500CA6980 /* MBProgressHUD */,
 				646256A11C0C87E20028CF5F /* AppDelegate.h */,
 				646256A21C0C87E20028CF5F /* AppDelegate.m */,
 			);
@@ -221,6 +229,8 @@
 		64E7CE471C0D6D7700E8FFBD /* models */ = {
 			isa = PBXGroup;
 			children = (
+				64B238191C2D768400CA6980 /* LEUser.h */,
+				64B2381A1C2D768400CA6980 /* LEUser.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -375,12 +385,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				646256A31C0C87E20028CF5F /* AppDelegate.m in Sources */,
+				64B2381B1C2D768400CA6980 /* LEUser.m in Sources */,
 				646256AC1C0C87E20028CF5F /* eFruit.xcdatamodeld in Sources */,
 				64E7CE581C0D786100E8FFBD /* LEFooterView.m in Sources */,
 				64E7CE4C1C0D6EF000E8FFBD /* LEHeaderView.m in Sources */,
 				646256A01C0C87E20028CF5F /* main.m in Sources */,
 				64B238131C2D4FB500CA6980 /* MBProgressHUD+MJ.m in Sources */,
 				64B2380C1C2D4F9400CA6980 /* LERegController.m in Sources */,
+				64B238181C2D722200CA6980 /* NSArray+Log.m in Sources */,
 				64B238151C2D4FB500CA6980 /* MBProgressHUD.m in Sources */,
 				64E7CE5B1C0D786100E8FFBD /* LEGoodsCell.m in Sources */,
 				64E7CE5A1C0D786100E8FFBD /* LEGoods.m in Sources */,

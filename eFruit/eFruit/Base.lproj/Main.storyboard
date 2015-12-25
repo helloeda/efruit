@@ -16,7 +16,7 @@
                         <color key="barTintColor" red="0.86220327375920169" green="1" blue="0.36550204398738684" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="xdC-58-fWK" kind="relationship" relationship="rootViewController" id="b1I-9l-lWN"/>
+                        <segue destination="DLy-F1-nWc" kind="relationship" relationship="rootViewController" id="Bkk-q0-tBj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oC-Bk-7w9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -55,7 +55,7 @@
                             <tableViewSection id="jor-0o-7Iv">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="me" rowHeight="80" id="flZ-WI-kPg">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="80"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="flZ-WI-kPg" id="q9l-s3-gNH">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
@@ -84,7 +84,7 @@
                             <tableViewSection id="PUR-Zk-bAh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="me" rowHeight="50" id="9Uw-OK-igo">
-                                        <rect key="frame" x="0.0" y="199" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="135" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Uw-OK-igo" id="fwo-bY-EMv">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
@@ -103,7 +103,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="me" rowHeight="50" id="VU6-is-Oyh">
-                                        <rect key="frame" x="0.0" y="249" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="185" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VU6-is-Oyh" id="7NO-20-3Ib">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
@@ -126,7 +126,7 @@
                             <tableViewSection id="ggf-BZ-LXV">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="me" rowHeight="50" id="pAP-lx-R0j">
-                                        <rect key="frame" x="0.0" y="319" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="255" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pAP-lx-R0j" id="GSE-fZ-DNO">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
@@ -145,7 +145,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="me" rowHeight="50" id="lc9-Bm-oGc">
-                                        <rect key="frame" x="0.0" y="369" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="305" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lc9-Bm-oGc" id="WMH-84-5aB">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
@@ -164,7 +164,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="me" rowHeight="50" id="HBy-Oh-0QI">
-                                        <rect key="frame" x="0.0" y="419" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="355" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HBy-Oh-0QI" id="zud-jS-Roj">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
@@ -233,7 +233,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="lgd-9Q-dXj">
             <objects>
-                <tabBarController id="xdC-58-fWK" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="tabbar" storyboardIdentifier="tabbar" id="xdC-58-fWK" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="KoH-9c-6ph"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eRU-NY-eMf">
@@ -275,7 +275,7 @@
         <!--Reg Controller-->
         <scene sceneID="55E-XD-lwv">
             <objects>
-                <viewController restorationIdentifier="1" storyboardIdentifier="1" id="zlG-Zc-wMa" customClass="LERegController" sceneMemberID="viewController">
+                <viewController id="zlG-Zc-wMa" customClass="LERegController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1xi-31-iIa"/>
                         <viewControllerLayoutGuide type="bottom" id="OYU-OK-gJd"/>
@@ -285,55 +285,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ed-j9-C3P">
-                                <rect key="frame" x="94" y="203" width="150" height="30"/>
+                                <rect key="frame" x="93" y="153" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ct-u4-eTK">
-                                <rect key="frame" x="94" y="250" width="150" height="30"/>
+                                <rect key="frame" x="93" y="200" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtt-zd-CSE">
-                                <rect key="frame" x="47" y="253" width="34" height="21"/>
+                                <rect key="frame" x="46" y="203" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-wZ-hwI">
-                                <rect key="frame" x="94" y="294" width="150" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="确认密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z5-hM-n38">
-                                <rect key="frame" x="13" y="297" width="68" height="21"/>
+                                <rect key="frame" x="12" y="247" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9n-be-ahQ">
-                                <rect key="frame" x="30" y="207" width="51" height="21"/>
+                                <rect key="frame" x="29" y="157" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJT-0a-sJW">
-                                <rect key="frame" x="153" y="157" width="34" height="21"/>
+                                <rect key="frame" x="143" y="110" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiC-ah-4K3">
-                                <rect key="frame" x="261" y="250" width="30" height="30"/>
+                                <rect key="frame" x="260" y="200" width="30" height="30"/>
                                 <state key="normal" title="注册"/>
                                 <connections>
                                     <action selector="regist" destination="zlG-Zc-wMa" eventType="touchUpInside" id="iwQ-KG-Chc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNf-r3-FcY">
-                                <rect key="frame" x="145" y="349" width="30" height="30"/>
-                                <state key="normal" title="登录"/>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2wj-wZ-hwI">
+                                <rect key="frame" x="93" y="244" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -346,12 +342,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uO3-Vq-4DL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-744" y="459"/>
+            <point key="canvasLocation" x="-346" y="-307"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="0ar-GS-Dss">
             <objects>
-                <viewController restorationIdentifier="2" storyboardIdentifier="2" id="DLy-F1-nWc" userLabel="Login Controller" customClass="LELoginController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="2" id="DLy-F1-nWc" userLabel="Login Controller" customClass="LELoginController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SKq-wr-fpb"/>
                         <viewControllerLayoutGuide type="bottom" id="Et6-Zy-vN4"/>
@@ -361,47 +357,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsO-ni-NlG">
-                                <rect key="frame" x="20" y="294" width="51" height="21"/>
+                                <rect key="frame" x="23" y="162" width="51" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFX-a7-CIq">
-                                <rect key="frame" x="37" y="332" width="34" height="21"/>
+                                <rect key="frame" x="40" y="200" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W0J-XA-O8J">
-                                <rect key="frame" x="84" y="290" width="150" height="30"/>
+                                <rect key="frame" x="87" y="158" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Sk-j4-bgG">
-                                <rect key="frame" x="84" y="328" width="150" height="30"/>
+                                <rect key="frame" x="87" y="196" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHH-n3-Rhy">
-                                <rect key="frame" x="251" y="311" width="30" height="30"/>
+                                <rect key="frame" x="256" y="175" width="30" height="30"/>
                                 <state key="normal" title="登录"/>
                                 <connections>
                                     <action selector="login" destination="DLy-F1-nWc" eventType="touchUpInside" id="w44-oU-5g5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKe-nP-BR2">
+                                <rect key="frame" x="181" y="243" width="30" height="30"/>
+                                <state key="normal" title="注册"/>
+                                <connections>
+                                    <segue destination="zlG-Zc-wMa" kind="show" id="9Ep-pL-WYq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新用户点击" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gi-d8-qvP">
+                                <rect key="frame" x="96" y="247" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9f-in-xfY">
-                                <rect key="frame" x="143" y="250" width="34" height="21"/>
+                                <rect key="frame" x="143" y="115" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKe-nP-BR2">
-                                <rect key="frame" x="143" y="380" width="30" height="30"/>
-                                <state key="normal" title="注册"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZEf-CX-3cl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="userPwdTextField" destination="3Sk-j4-bgG" id="rY8-F2-RWj"/>
@@ -410,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrT-Io-CSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-539" y="-77"/>
+            <point key="canvasLocation" x="-744" y="-313"/>
         </scene>
     </scenes>
     <resources>
