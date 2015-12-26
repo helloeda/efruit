@@ -84,18 +84,25 @@
             [MBProgressHUD showError:@"密码错误，请重试！"];
             
         }
-        else if ([status isEqual:@3])
-        {
-            [MBProgressHUD showError:@"服务器繁忙，请稍后！"];
-            
-        }
         else if ([status isEqual:@0]){
             [MBProgressHUD showSuccess:@"登录成功！"];
+            //获取用户信息保存到沙盒plist中
+            NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            //获取完整路径
+            NSString *documentsPath = [path objectAtIndex:0];
+            NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"user.plist"];
+            //写入文件
+            [dict writeToFile:plistPath atomically:YES];
+            
             sleep(1);
             
             UIStoryboard *story=[UIStoryboard  storyboardWithName:@"Main" bundle:nil];
             UIViewController *dtView=[story  instantiateViewControllerWithIdentifier:@"tabbar"];
             [self presentViewController:dtView animated:NO completion:nil];
+        }
+        else
+        {
+            [MBProgressHUD showError:@"服务器繁忙，请稍后！"];
         }
         
     }];
