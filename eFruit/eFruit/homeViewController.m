@@ -12,15 +12,13 @@
 #import "LEFooterView.h"
 #import "LEHeaderView.h"
 @interface homeViewController ()<UITableViewDataSource,LEFooterViewDelegate>
-
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *goods;
-
 @end
 
 @implementation homeViewController
 
+int cellCount =10;
 
 #pragma mark - 懒加载数据
 
@@ -49,7 +47,7 @@
 #pragma mark - 数据源方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.goods.count;
+    return cellCount;
     
 }
 
@@ -72,16 +70,12 @@
 #pragma mark - LEFooterView的代理方法
 - (void)footerViewUpdateData:(LEFooterView *)footerView
 {
-    LEGoods *model = [[LEGoods alloc] init];
-    model.fruitName = @"朱家尖大西瓜";
-    model.fruitPrice = @"6.0";
-    model.fruitSales = @"100";
-    model.fruitImage = @"watermelon.jpg";
-    [self.goods addObject:model];
-    [self.tableView reloadData];
-    
-    NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:self.goods.count-1 inSection:0];
-    [self.tableView scrollToRowAtIndexPath:currentIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    if (cellCount != self.goods.count) {
+        cellCount++;
+        [self.tableView reloadData];
+        NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:cellCount-1 inSection:0];
+        [self.tableView scrollToRowAtIndexPath:currentIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    }
 }
 
 #pragma mark - 加载控制器方法

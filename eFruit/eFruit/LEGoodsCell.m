@@ -29,7 +29,7 @@
     self.lblPrice.text = [NSString stringWithFormat:@"¥ %@",goods.fruitPrice];
     self.lblBuyCount.text = [NSString stringWithFormat:@"%@ 人已经购买",goods.fruitSales];
     
-    [self.imgViewIcon sd_setImageWithURL:[NSURL URLWithString:goods.fruitImage] placeholderImage:[UIImage imageNamed:@"user_default"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self.imgViewIcon sd_setImageWithURL:[NSURL URLWithString:goods.fruitImage] placeholderImage:[UIImage imageNamed:@"fruit_default"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         // receivedSize 已经接受到的大小
         // expectedSize 期望的大小，总大小
 //        float progress = (float)receivedSize/expectedSize;

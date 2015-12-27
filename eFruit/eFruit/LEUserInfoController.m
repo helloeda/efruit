@@ -9,7 +9,9 @@
 #import "LEUserInfoController.h"
 #import "LEUser.h"
 #import "AppDelegate.h"
+#import "UIImageView+WebCache.h"
 @interface LEUserInfoController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imgViewIcon;
 @property (weak, nonatomic) IBOutlet UILabel *lblUserName;
 @property (weak, nonatomic) IBOutlet UILabel *lblUserSex;
 @property (weak, nonatomic) IBOutlet UILabel *lblUserBirth;
@@ -40,6 +42,15 @@
     self.lblUserSex.text = self.user.userSex;
     self.lblUserBirth.text = self.user.userBirth;
     self.lblUserTel.text = self.user.userTel;
+    [self.imgViewIcon sd_setImageWithURL:[NSURL URLWithString:self.user.userIcon] placeholderImage:[UIImage imageNamed:@"icon_default"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        // receivedSize 已经接受到的大小
+        // expectedSize 期望的大小，总大小
+        //        float progress = (float)receivedSize/expectedSize;
+        //        NSLog(@"下载进度 %f", progress);
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        //        NSLog(@"%@", [NSThread currentThread]);
+    }];
     
 }
 

@@ -9,7 +9,9 @@
 #import "LEUserController.h"
 #import "LEUser.h"
 #import "AppDelegate.h"
+#import "UIImageView+WebCache.h"
 @interface LEUserController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imgViewIcon;
 @property (weak, nonatomic) IBOutlet UILabel *userTel;
 @property (weak, nonatomic) IBOutlet UILabel *userName;
 @property (strong, nonatomic) LEUser *user;
@@ -37,6 +39,16 @@
     [super viewDidLoad];
     self.userTel.text = self.user.userTel;
     self.userName.text = self.user.userName;
+    [self.imgViewIcon sd_setImageWithURL:[NSURL URLWithString:self.user.userIcon] placeholderImage:[UIImage imageNamed:@"icon_default"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        // receivedSize 已经接受到的大小
+        // expectedSize 期望的大小，总大小
+        //        float progress = (float)receivedSize/expectedSize;
+        //        NSLog(@"下载进度 %f", progress);
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        //        NSLog(@"%@", [NSThread currentThread]);
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
