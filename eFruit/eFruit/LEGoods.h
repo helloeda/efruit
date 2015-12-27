@@ -10,10 +10,13 @@
 
 @interface LEGoods : NSObject
 
-@property (nonatomic, copy) NSString *buyCount;
-@property (nonatomic, copy) NSString *price;
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *icon;
+@property (nonatomic, copy) NSString *fruitId;
+@property (nonatomic, copy) NSString *fruitName;
+@property (nonatomic, copy) NSString *fruitImage;
+@property (nonatomic, copy) NSString *fruitIntro;
+@property (nonatomic, copy) NSString *fruitPrice;
+@property (nonatomic, copy) NSString *fruitSales;
+@property (nonatomic, copy) NSString *fruitBuyable;
 
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)goodsWithDict:(NSDictionary *)dict;

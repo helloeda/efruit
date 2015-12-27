@@ -22,6 +22,8 @@
 		64B238151C2D4FB500CA6980 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B238121C2D4FB500CA6980 /* MBProgressHUD.m */; };
 		64B238181C2D722200CA6980 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B238171C2D722200CA6980 /* NSArray+Log.m */; };
 		64B2381B1C2D768400CA6980 /* LEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B2381A1C2D768400CA6980 /* LEUser.m */; };
+		64DF22B41C2E8A5400708197 /* LEUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DF22B31C2E8A5400708197 /* LEUserController.m */; };
+		64E61F461C2EB2FE00058C55 /* LEUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E61F451C2EB2FE00058C55 /* LEUserInfoController.m */; };
 		64E7CE441C0D6D4100E8FFBD /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E7CE431C0D6D4100E8FFBD /* homeViewController.m */; };
 		64E7CE4C1C0D6EF000E8FFBD /* LEHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E7CE4A1C0D6EF000E8FFBD /* LEHeaderView.m */; };
 		64E7CE4D1C0D6EF000E8FFBD /* LEHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64E7CE4B1C0D6EF000E8FFBD /* LEHeaderView.xib */; };
@@ -79,6 +81,10 @@
 		64B238171C2D722200CA6980 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		64B238191C2D768400CA6980 /* LEUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEUser.h; sourceTree = "<group>"; };
 		64B2381A1C2D768400CA6980 /* LEUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEUser.m; sourceTree = "<group>"; };
+		64DF22B21C2E8A5400708197 /* LEUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEUserController.h; sourceTree = "<group>"; };
+		64DF22B31C2E8A5400708197 /* LEUserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEUserController.m; sourceTree = "<group>"; };
+		64E61F441C2EB2FE00058C55 /* LEUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEUserInfoController.h; sourceTree = "<group>"; };
+		64E61F451C2EB2FE00058C55 /* LEUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEUserInfoController.m; sourceTree = "<group>"; };
 		64E7CE421C0D6D4100E8FFBD /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
 		64E7CE431C0D6D4100E8FFBD /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
 		64E7CE491C0D6EF000E8FFBD /* LEHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEHeaderView.h; sourceTree = "<group>"; };
@@ -215,10 +221,6 @@
 				64E7CE501C0D786100E8FFBD /* LEFooterView.h */,
 				64E7CE511C0D786100E8FFBD /* LEFooterView.m */,
 				64E7CE521C0D786100E8FFBD /* LEFooterView.xib */,
-				64E7CE531C0D786100E8FFBD /* LEGoods.h */,
-				64E7CE541C0D786100E8FFBD /* LEGoods.m */,
-				64E7CE551C0D786100E8FFBD /* LEGoodsCell.h */,
-				64E7CE561C0D786100E8FFBD /* LEGoodsCell.m */,
 				64E7CE571C0D786100E8FFBD /* LEGoodsCell.xib */,
 				646256A71C0C87E20028CF5F /* Main.storyboard */,
 				646256AF1C0C87E20028CF5F /* LaunchScreen.storyboard */,
@@ -231,6 +233,10 @@
 			children = (
 				64B238191C2D768400CA6980 /* LEUser.h */,
 				64B2381A1C2D768400CA6980 /* LEUser.m */,
+				64E7CE531C0D786100E8FFBD /* LEGoods.h */,
+				64E7CE541C0D786100E8FFBD /* LEGoods.m */,
+				64E7CE551C0D786100E8FFBD /* LEGoodsCell.h */,
+				64E7CE561C0D786100E8FFBD /* LEGoodsCell.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -244,6 +250,10 @@
 				64B238081C2D4EC500CA6980 /* LELoginController.m */,
 				64B2380A1C2D4F9400CA6980 /* LERegController.h */,
 				64B2380B1C2D4F9400CA6980 /* LERegController.m */,
+				64DF22B21C2E8A5400708197 /* LEUserController.h */,
+				64DF22B31C2E8A5400708197 /* LEUserController.m */,
+				64E61F441C2EB2FE00058C55 /* LEUserInfoController.h */,
+				64E61F451C2EB2FE00058C55 /* LEUserInfoController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -385,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				646256A31C0C87E20028CF5F /* AppDelegate.m in Sources */,
+				64E61F461C2EB2FE00058C55 /* LEUserInfoController.m in Sources */,
 				64B2381B1C2D768400CA6980 /* LEUser.m in Sources */,
 				646256AC1C0C87E20028CF5F /* eFruit.xcdatamodeld in Sources */,
 				64E7CE581C0D786100E8FFBD /* LEFooterView.m in Sources */,
@@ -396,6 +407,7 @@
 				64B238151C2D4FB500CA6980 /* MBProgressHUD.m in Sources */,
 				64E7CE5B1C0D786100E8FFBD /* LEGoodsCell.m in Sources */,
 				64E7CE5A1C0D786100E8FFBD /* LEGoods.m in Sources */,
+				64DF22B41C2E8A5400708197 /* LEUserController.m in Sources */,
 				64B238091C2D4EC500CA6980 /* LELoginController.m in Sources */,
 				64E7CE441C0D6D4100E8FFBD /* homeViewController.m in Sources */,
 			);

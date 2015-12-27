@@ -9,6 +9,7 @@
 #import "LELoginController.h"
 #import "MBProgressHUD+MJ.h"
 #import "homeViewController.h"
+#import "AppDelegate.h"
 @interface LELoginController ()
 @property (weak, nonatomic) IBOutlet UITextField *userTelTextField;
 @property (weak, nonatomic) IBOutlet UITextField *userPwdTextField;
@@ -86,16 +87,23 @@
         }
         else if ([status isEqual:@0]){
             [MBProgressHUD showSuccess:@"登录成功！"];
-            //获取用户信息保存到沙盒plist中
-            NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            //获取完整路径
-            NSString *documentsPath = [path objectAtIndex:0];
-            NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"user.plist"];
-            //写入文件
-            [dict writeToFile:plistPath atomically:YES];
+            //把用户信息存到全局变量中
+            AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+            myDelegate.user = [LEUser userWithDict:dict];
             
-            sleep(1);
+            //更新水果信息
+            NSURL *fruitUrl = [NSURL URLWithString:@"http://127.0.0.1/fruit.php"];
+            // session发起任务
+            [[[NSURLSession sharedSession] dataTaskWithURL:fruitUrl completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                // 反序列化
+                id dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+                NSString *home = NSHomeDirectory();
+                NSString *docPath = [home stringByAppendingPathComponent:@"Documents"];
+                NSString *filepath = [docPath stringByAppendingPathComponent:@"fruit.plist"];
+                [dict writeToFile:filepath atomically:YES];
+            }] resume];
             
+            //切换界面
             UIStoryboard *story=[UIStoryboard  storyboardWithName:@"Main" bundle:nil];
             UIViewController *dtView=[story  instantiateViewControllerWithIdentifier:@"tabbar"];
             [self presentViewController:dtView animated:NO completion:nil];

@@ -28,8 +28,13 @@
 {
     if(_goods == nil)
     {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"fruit.plist" ofType:nil];
-        NSArray *arrayDict = [NSArray arrayWithContentsOfFile:path];
+        // 1.获得沙盒根路径
+        NSString *home = NSHomeDirectory();
+        // 2.document路径
+        NSString *docPath = [home stringByAppendingPathComponent:@"Documents"];
+        // 3.文件路径
+        NSString *filepath = [docPath stringByAppendingPathComponent:@"fruit.plist"];
+        NSArray *arrayDict = [NSArray arrayWithContentsOfFile:filepath];
         NSMutableArray *arrayModel = [NSMutableArray array];
         for (NSDictionary *dict in arrayDict) {
             LEGoods *model = [LEGoods goodsWithDict:dict];
@@ -68,15 +73,15 @@
 - (void)footerViewUpdateData:(LEFooterView *)footerView
 {
     LEGoods *model = [[LEGoods alloc] init];
-    model.title = @"朱家尖大西瓜";
-    model.price = @"6.0";
-    model.buyCount = @"1000";
-    model.icon = @"watermelon.jpg";
+    model.fruitName = @"朱家尖大西瓜";
+    model.fruitPrice = @"6.0";
+    model.fruitSales = @"1000";
+    model.fruitImage = @"watermelon.jpg";
     [self.goods addObject:model];
     [self.tableView reloadData];
     
-    NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:self.goods.count-1 inSection:0];
-    [self.tableView scrollToRowAtIndexPath:currentIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//    NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:self.goods.count-1 inSection:0];
+//    [self.tableView scrollToRowAtIndexPath:currentIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 #pragma mark - 加载控制器方法

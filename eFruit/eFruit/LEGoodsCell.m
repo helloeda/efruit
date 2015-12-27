@@ -24,10 +24,10 @@
 - (void)setGoods:(LEGoods *)goods
 {
     _goods = goods;
-    self.imgViewIcon.image = [UIImage imageNamed:goods.icon];
-    self.lblTitle.text = goods.title;
-    self.lblPrice.text = [NSString stringWithFormat:@"¥ %@",goods.price];
-    self.lblBuyCount.text = [NSString stringWithFormat:@"%@ 人已经购买",goods.buyCount];
+    self.imgViewIcon.image = [UIImage imageNamed:goods.fruitImage];
+    self.lblTitle.text = goods.fruitName;
+    self.lblPrice.text = [NSString stringWithFormat:@"¥ %@",goods.fruitPrice];
+    self.lblBuyCount.text = [NSString stringWithFormat:@"%@ 人已经购买",goods.fruitSales];
 }
 
 
