@@ -75,13 +75,13 @@
     LEGoods *model = [[LEGoods alloc] init];
     model.fruitName = @"朱家尖大西瓜";
     model.fruitPrice = @"6.0";
-    model.fruitSales = @"1000";
+    model.fruitSales = @"100";
     model.fruitImage = @"watermelon.jpg";
     [self.goods addObject:model];
     [self.tableView reloadData];
     
-//    NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:self.goods.count-1 inSection:0];
-//    [self.tableView scrollToRowAtIndexPath:currentIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    NSIndexPath *currentIndexPath = [NSIndexPath indexPathForRow:self.goods.count-1 inSection:0];
+    [self.tableView scrollToRowAtIndexPath:currentIndexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
 
 #pragma mark - 加载控制器方法

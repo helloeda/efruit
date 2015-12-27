@@ -8,6 +8,7 @@
 
 #import "LEGoodsCell.h"
 #import "LEGoods.h"
+#import "UIImageView+WebCache.h"
 @interface LEGoodsCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgViewIcon;
@@ -24,10 +25,21 @@
 - (void)setGoods:(LEGoods *)goods
 {
     _goods = goods;
-    self.imgViewIcon.image = [UIImage imageNamed:goods.fruitImage];
     self.lblTitle.text = goods.fruitName;
     self.lblPrice.text = [NSString stringWithFormat:@"¥ %@",goods.fruitPrice];
     self.lblBuyCount.text = [NSString stringWithFormat:@"%@ 人已经购买",goods.fruitSales];
+    
+    [self.imgViewIcon sd_setImageWithURL:[NSURL URLWithString:goods.fruitImage] placeholderImage:[UIImage imageNamed:@"user_default"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        // receivedSize 已经接受到的大小
+        // expectedSize 期望的大小，总大小
+//        float progress = (float)receivedSize/expectedSize;
+//        NSLog(@"下载进度 %f", progress);
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        NSLog(@"%@", [NSThread currentThread]);
+    }];
+    
+    
 }
 
 
