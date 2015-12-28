@@ -12,6 +12,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) LEUser *user; //全局变量保存用户信息
+@property (strong, nonatomic) NSMutableArray *carts; //全局变量保存购物车
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

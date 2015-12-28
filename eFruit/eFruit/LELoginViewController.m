@@ -1,23 +1,23 @@
 //
-//  LELoginController.m
+//  LELoginViewController.m
 //  eFruit
 //
 //  Created by Eda on 15/12/25.
 //  Copyright © 2015年 Eda. All rights reserved.
 //
 
-#import "LELoginController.h"
+#import "LELoginViewController.h"
 #import "MBProgressHUD+MJ.h"
-#import "homeViewController.h"
+#import "LEHomeViewController.h"
 #import "AppDelegate.h"
-@interface LELoginController ()
+@interface LELoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userTelTextField;
 @property (weak, nonatomic) IBOutlet UITextField *userPwdTextField;
 - (IBAction)login;
 
 @end
 
-@implementation LELoginController
+@implementation LELoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -86,6 +86,7 @@
             
         }
         else if ([status isEqual:@0]){
+            
             [MBProgressHUD showSuccess:@"登录成功！"];
             //把用户信息存到全局变量中
             AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];

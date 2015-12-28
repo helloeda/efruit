@@ -6,17 +6,18 @@
 //  Copyright © 2015年 Eda. All rights reserved.
 //
 
-#import "homeViewController.h"
+#import "LEHomeViewController.h"
 #import "LEGoods.h"
 #import "LEGoodsCell.h"
 #import "LEFooterView.h"
 #import "LEHeaderView.h"
-@interface homeViewController ()<UITableViewDataSource,LEFooterViewDelegate>
+#import "LEHomeDetailViewController.h"
+@interface LEHomeViewController () <UITableViewDataSource,LEFooterViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *goods;
 @end
 
-@implementation homeViewController
+@implementation LEHomeViewController
 
 int cellCount =10;
 
@@ -97,6 +98,23 @@ int cellCount =10;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+#pragma mark - UITableViewDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    LEGoods *fruitM = _goods[indexPath.row];
+    UIStoryboard *story=[UIStoryboard  storyboardWithName:@"Main" bundle:nil];
+    LEHomeDetailViewController *homeDetailVC = [story instantiateViewControllerWithIdentifier:@"homeDetail"];
+    homeDetailVC.good = fruitM;
+    [self.navigationController pushViewController:homeDetailVC animated:YES];
+    
+}
+
+
+
 
 //#pragma mark - 隐藏状态栏
 //- (BOOL) prefersStatusBarHidden

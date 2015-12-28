@@ -7,16 +7,16 @@
 //
 
 
-#import "LERegController.h"
+#import "LERegViewController.h"
 #import "MBProgressHUD+MJ.h"
-@interface LERegController ()
+@interface LERegViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userTelTextField;
 @property (weak, nonatomic) IBOutlet UITextField *userPwdTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmTextField;
 - (IBAction)regist;
 
 @end
-@implementation LERegController
+@implementation LERegViewController
 
 - (IBAction)regist {
     // 1.用户名
@@ -97,7 +97,7 @@
         else if ([status isEqual:@0]){
             [MBProgressHUD showSuccess:@"恭喜您，注册成功！"];
         }
-        else if ([status isEqual:@4]){
+        else {
             [MBProgressHUD showSuccess:@"网络繁忙，请稍后！"];
         }
         

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LELoginController : UIViewController
+@interface LELoginViewController : UIViewController
 
 @end

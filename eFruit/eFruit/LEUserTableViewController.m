@@ -1,26 +1,23 @@
 //
-//  LEUserInfoController.m
+//  LEUserController.m
 //  eFruit
 //
 //  Created by Eda on 15/12/26.
 //  Copyright © 2015年 Eda. All rights reserved.
 //
 
-#import "LEUserInfoController.h"
+#import "LEUserTableViewController.h"
 #import "LEUser.h"
 #import "AppDelegate.h"
 #import "UIImageView+WebCache.h"
-@interface LEUserInfoController ()
+@interface LEUserTableViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imgViewIcon;
-@property (weak, nonatomic) IBOutlet UILabel *lblUserName;
-@property (weak, nonatomic) IBOutlet UILabel *lblUserSex;
-@property (weak, nonatomic) IBOutlet UILabel *lblUserBirth;
-@property (weak, nonatomic) IBOutlet UILabel *lblUserTel;
+@property (weak, nonatomic) IBOutlet UILabel *userTel;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
 @property (strong, nonatomic) LEUser *user;
 @end
 
-@implementation LEUserInfoController
-
+@implementation LEUserTableViewController
 
 
 #pragma mark - 懒加载数据
@@ -36,12 +33,12 @@
     
 }
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.lblUserName.text = self.user.userName;
-    self.lblUserSex.text = self.user.userSex;
-    self.lblUserBirth.text = self.user.userBirth;
-    self.lblUserTel.text = self.user.userTel;
+    self.userTel.text = self.user.userTel;
+    self.userName.text = self.user.userName;
     [self.imgViewIcon sd_setImageWithURL:[NSURL URLWithString:self.user.userIcon] placeholderImage:[UIImage imageNamed:@"icon_default"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         // receivedSize 已经接受到的大小
         // expectedSize 期望的大小，总大小
@@ -51,15 +48,15 @@
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         //        NSLog(@"%@", [NSThread currentThread]);
     }];
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//
-//#pragma mark - Table view data source
+
+#pragma mark - Table view data source
 //
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Incomplete implementation, return the number of sections

@@ -37,6 +37,7 @@
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
 //        NSLog(@"%@", [NSThread currentThread]);
+
     }];
     
     

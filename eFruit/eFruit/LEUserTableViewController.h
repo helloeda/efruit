@@ -1,5 +1,5 @@
 //
-//  LEUserInfoController.h
+//  LEUserController.h
 //  eFruit
 //
 //  Created by Eda on 15/12/26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LEUserInfoController : UITableViewController
+@interface LEUserTableViewController : UITableViewController
 
 @end
