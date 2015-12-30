@@ -30,7 +30,7 @@
 
  			$boughtTime = date('Y-m-d H:i:s',time());
 
-
+ 			mysql_query("SET NAMES 'UTF8'"); 
 			$sql_insert = "INSERT INTO total_order 
 			VALUES ($id,$shopId,$userId, '$boughtTime', '$orderRemarks', '$deliveryMethod' , '$orderAddress', '0', '$subOrderId')";
 			$res_insert = mysql_query($sql_insert);

@@ -64,8 +64,6 @@ int cellCount =10;
     //4. 返回cell
     return cell;
     
-    
-    
 }
 
 #pragma mark - LEFooterView的代理方法

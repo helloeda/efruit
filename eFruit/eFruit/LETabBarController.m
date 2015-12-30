@@ -8,6 +8,7 @@
 
 #import "LETabBarController.h"
 #import "LECartViewController.h"
+#import "LEOrderViewController.h"
 @interface LETabBarController ()
 
 @end
@@ -31,6 +32,11 @@
         UINavigationController *navigation =(UINavigationController *)viewController;
         LECartViewController *notice=(LECartViewController *)navigation.topViewController;
         [notice refreshData];
+    }
+    if (viewController.tabBarItem.tag==4) {
+        UINavigationController *navigation =(UINavigationController *)viewController;
+        LEOrderViewController *notice=(LEOrderViewController *)navigation.topViewController;
+        [notice reloadData];
     }
 }
 //禁止tab多次点击
