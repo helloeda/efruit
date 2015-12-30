@@ -23,7 +23,7 @@
 
 @implementation LEOrderViewController
 
-
+#pragma mark - 代理方法reloadData实现
 - (void)reloadData
 {
     [self loadOrder];
@@ -53,14 +53,14 @@
 }
 
 
-#pragma mark - Table view 数据源方法
+#pragma mark - 请求订单数据
 -(void) loadOrder{
     
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
     // 1.设置请求路径
-    NSURL *URL=[NSURL URLWithString:@"http://127.0.0.1/order.php"];
+    NSURL *URL=[NSURL URLWithString:@"http://fruit.eda.im/order.php"];
     
     // 2.创建请求对象
     NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:URL];//默认为get请求

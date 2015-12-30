@@ -28,6 +28,10 @@
 @end
 
 @implementation LECartViewController
+
+
+#pragma - mark 代理方法refreshData实现
+
 - (void)refreshData
 {
     [self.tableView reloadData];
@@ -41,7 +45,7 @@
     
     
 }
-
+#pragma - mark 选择配送方式方法
 - (IBAction)segChangeDelivery {
     //此处配送选择功能未实现
     if(self.segDelivery.selectedSegmentIndex == 0)
@@ -83,7 +87,7 @@
         NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
 
         // 1.设置请求路径
-        NSURL *URL=[NSURL URLWithString:@"http://127.0.0.1/submit_order.php"];//不需要传递参数
+        NSURL *URL=[NSURL URLWithString:@"http://fruit.eda.im/submit_order.php"];//不需要传递参数
         // 2.创建请求对象
         NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:URL];
         request.timeoutInterval=5.0;//设置请求超时为5秒
@@ -107,7 +111,7 @@
                 NSString *subOrderId =[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
                 
                 // 1.设置请求路径
-                NSURL *URL=[NSURL URLWithString:@"http://127.0.0.1/submit_total.php"];//不需要传递参数
+                NSURL *URL=[NSURL URLWithString:@"http://fruit.eda.im/submit_total.php"];//不需要传递参数
                 // 2.创建请求对象
                 NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:URL];
                 request.timeoutInterval=5.0;//设置请求超时为5秒
@@ -127,6 +131,7 @@
                         [myDelegate.carts removeAllObjects];
                         [self.tableView reloadData];
                          self.tableView.tableFooterView.hidden = YES;
+                        
                     }
                     else if ([status isEqual:@1])
                     {

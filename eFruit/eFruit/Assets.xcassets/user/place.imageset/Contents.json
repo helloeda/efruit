@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "place.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "wait_product_icon@2x.png",
       "scale" : "2x"
     },
     {

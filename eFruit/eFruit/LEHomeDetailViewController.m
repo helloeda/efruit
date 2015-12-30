@@ -27,9 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.title = @"商品详情";
-   
     [self.imgViewIcon sd_setImageWithURL:[NSURL URLWithString:self.good.fruitImage] placeholderImage:[UIImage imageNamed:@"fruit_default"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         //        NSLog(@"%@", [NSThread currentThread]);

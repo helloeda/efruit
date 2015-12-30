@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -59,7 +60,7 @@
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: nil delegateQueue: [NSOperationQueue mainQueue]];
     
     // 1.设置请求路径
-    NSURL *URL=[NSURL URLWithString:@"http://127.0.0.1/login.php"];//不需要传递参数
+    NSURL *URL=[NSURL URLWithString:@"http://fruit.eda.im/login.php"];//不需要传递参数
     
     // 2.创建请求对象
     NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:URL];//默认为get请求
@@ -98,7 +99,7 @@
             myDelegate.user = [LEUser userWithDict:dict];
             
             //更新水果信息
-            NSURL *fruitUrl = [NSURL URLWithString:@"http://127.0.0.1/fruit.php"];
+            NSURL *fruitUrl = [NSURL URLWithString:@"http://fruit.eda.im/fruit.php"];
             // session发起任务
             [[[NSURLSession sharedSession] dataTaskWithURL:fruitUrl completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                 // 反序列化

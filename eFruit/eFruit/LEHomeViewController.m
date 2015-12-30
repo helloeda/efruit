@@ -80,7 +80,6 @@ int cellCount =10;
 #pragma mark - 加载控制器方法
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.tableView.showsVerticalScrollIndicator = FALSE;
     self.tableView.rowHeight = 68;
     LEFooterView *footerView = [LEFooterView footerView];
