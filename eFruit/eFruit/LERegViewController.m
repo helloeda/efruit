@@ -18,6 +18,12 @@
 @end
 @implementation LERegViewController
 
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+
 - (IBAction)regist {
     // 1.用户名
     NSString *userTelText = self.userTelTextField.text;

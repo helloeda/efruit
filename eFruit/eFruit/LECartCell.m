@@ -68,7 +68,7 @@
 
 - (IBAction)btnSub {
     
-    if (self.cart.num > 0) {
+    if (self.cart.num > 1) {
         self.cart.num--;
         self.lblNum.text = [NSString stringWithFormat:@"%d",self.cart.num];
     }

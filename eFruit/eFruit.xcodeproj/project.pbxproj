@@ -17,6 +17,8 @@
 		646256B11C0C87E20028CF5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646256AF1C0C87E20028CF5F /* LaunchScreen.storyboard */; };
 		646256BC1C0C87E20028CF5F /* eFruitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 646256BB1C0C87E20028CF5F /* eFruitTests.m */; };
 		646256C71C0C87E20028CF5F /* eFruitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 646256C61C0C87E20028CF5F /* eFruitUITests.m */; };
+		64904EA71C3182FA002F8901 /* LECartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904EA61C3182FA002F8901 /* LECartFooterView.m */; };
+		64904EA91C318307002F8901 /* LECartFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64904EA81C318307002F8901 /* LECartFooterView.xib */; };
 		6497C2731C2FC2E20087DD7C /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6497C2531C2FC2E20087DD7C /* MKAnnotationView+WebCache.m */; };
 		6497C2741C2FC2E20087DD7C /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6497C2551C2FC2E20087DD7C /* NSData+ImageContentType.m */; };
 		6497C2751C2FC2E20087DD7C /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6497C2571C2FC2E20087DD7C /* SDImageCache.m */; };
@@ -93,6 +95,9 @@
 		646256C21C0C87E20028CF5F /* eFruitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eFruitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		646256C61C0C87E20028CF5F /* eFruitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eFruitUITests.m; sourceTree = "<group>"; };
 		646256C81C0C87E20028CF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64904EA51C3182FA002F8901 /* LECartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LECartFooterView.h; sourceTree = "<group>"; };
+		64904EA61C3182FA002F8901 /* LECartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LECartFooterView.m; sourceTree = "<group>"; };
+		64904EA81C318307002F8901 /* LECartFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LECartFooterView.xib; sourceTree = "<group>"; };
 		6497C2521C2FC2E20087DD7C /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		6497C2531C2FC2E20087DD7C /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		6497C2541C2FC2E20087DD7C /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -251,6 +256,32 @@
 			path = eFruitUITests;
 			sourceTree = "<group>";
 		};
+		64904EA31C3181F9002F8901 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				64E7CE551C0D786100E8FFBD /* LEGoodsCell.h */,
+				64E7CE561C0D786100E8FFBD /* LEGoodsCell.m */,
+				64E7CE571C0D786100E8FFBD /* LEGoodsCell.xib */,
+				64E7CE491C0D6EF000E8FFBD /* LEHeaderView.h */,
+				64E7CE4A1C0D6EF000E8FFBD /* LEHeaderView.m */,
+				64E7CE4B1C0D6EF000E8FFBD /* LEHeaderView.xib */,
+				64E7CE501C0D786100E8FFBD /* LEFooterView.h */,
+				64E7CE511C0D786100E8FFBD /* LEFooterView.m */,
+				64E7CE521C0D786100E8FFBD /* LEFooterView.xib */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		64904EA41C318217002F8901 /* cart */ = {
+			isa = PBXGroup;
+			children = (
+				64904EA51C3182FA002F8901 /* LECartFooterView.h */,
+				64904EA61C3182FA002F8901 /* LECartFooterView.m */,
+				64904EA81C318307002F8901 /* LECartFooterView.xib */,
+			);
+			name = cart;
+			sourceTree = "<group>";
+		};
 		6497C2511C2FC2E20087DD7C /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,15 +392,8 @@
 		64E7CE461C0D6D6600E8FFBD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				64E7CE551C0D786100E8FFBD /* LEGoodsCell.h */,
-				64E7CE561C0D786100E8FFBD /* LEGoodsCell.m */,
-				64E7CE571C0D786100E8FFBD /* LEGoodsCell.xib */,
-				64E7CE491C0D6EF000E8FFBD /* LEHeaderView.h */,
-				64E7CE4A1C0D6EF000E8FFBD /* LEHeaderView.m */,
-				64E7CE4B1C0D6EF000E8FFBD /* LEHeaderView.xib */,
-				64E7CE501C0D786100E8FFBD /* LEFooterView.h */,
-				64E7CE511C0D786100E8FFBD /* LEFooterView.m */,
-				64E7CE521C0D786100E8FFBD /* LEFooterView.xib */,
+				64904EA41C318217002F8901 /* cart */,
+				64904EA31C3181F9002F8901 /* home */,
 				646256A71C0C87E20028CF5F /* Main.storyboard */,
 				646256AF1C0C87E20028CF5F /* LaunchScreen.storyboard */,
 				640E52B81C314A3F001E3A5B /* LECartCell.h */,
@@ -513,6 +537,7 @@
 				64B238141C2D4FB500CA6980 /* MBProgressHUD.bundle in Resources */,
 				640E52BC1C314A3F001E3A5B /* LECartCell.xib in Resources */,
 				64E7CE591C0D786100E8FFBD /* LEFooterView.xib in Resources */,
+				64904EA91C318307002F8901 /* LECartFooterView.xib in Resources */,
 				64E7CE4D1C0D6EF000E8FFBD /* LEHeaderView.xib in Resources */,
 				6497C2841C2FC4980087DD7C /* Assets.xcassets in Resources */,
 				64E7CE5C1C0D786100E8FFBD /* LEGoodsCell.xib in Resources */,
@@ -543,6 +568,7 @@
 			files = (
 				6497C27D1C2FC2E20087DD7C /* UIImage+GIF.m in Sources */,
 				646256A31C0C87E20028CF5F /* AppDelegate.m in Sources */,
+				64904EA71C3182FA002F8901 /* LECartFooterView.m in Sources */,
 				64E61F461C2EB2FE00058C55 /* LEUserInfoTableViewController.m in Sources */,
 				64B2381B1C2D768400CA6980 /* LEUser.m in Sources */,
 				646256AC1C0C87E20028CF5F /* eFruit.xcdatamodeld in Sources */,

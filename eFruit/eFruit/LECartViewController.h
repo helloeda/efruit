@@ -10,6 +10,5 @@
 
 //定义代理协议
 @interface LECartViewController : UIViewController
-
 - (void)refreshData;
 @end
