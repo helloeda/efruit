@@ -19,7 +19,7 @@
 		}
 		else
 		{
-			mysql_connect("127.0.0.1","root","940620");	//连接数据库
+			include "config.php";
 			mysql_select_db("efruit");	//选择数据库
 			mysql_query("set names 'UTF-8'");	//设定字符集
 			$result = mysql_query("SELECT max(order_id) FROM total_order");

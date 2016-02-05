@@ -2,7 +2,7 @@
 
 	  function showOrder() {
         $userId = $_POST["userid"];
-        $con = mysql_connect("127.0.0.1","root","940620");
+        include "config.php";
         mysql_select_db("efruit");	//选择数据库
         mysql_query("set names utf8;");
         $orders = array();

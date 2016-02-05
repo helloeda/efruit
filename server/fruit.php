@@ -2,7 +2,7 @@
     function userLogin() {
         $userTel = $_POST["usertel"];
         $userPassword = $_POST["password"];
-        $con = mysql_connect("127.0.0.1","root","940620");
+        include "config.php";
 	    if(!$con)
  	    {
 	        $fruitStatus = 0;
